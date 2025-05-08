@@ -3,9 +3,9 @@ packages:
   - components/*
   - configs/*
 catalog:
-  "@svebcomponents/build": 0.0.0
-  "@svebcomponents/ssr": 0.0.1
-  "@svebcomponents/auto-options": 0.0.1
+  "@svebcomponents/build": 0.0.3
+  "@svebcomponents/ssr": 0.0.4
+  "@svebcomponents/auto-options": 0.0.4
   "@sveltejs/adapter-auto": 6.0.0
   "@sveltejs/kit": 2.20.5
   "@sveltejs/package": 2.3.10
