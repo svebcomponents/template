@@ -17,14 +17,14 @@
     "check-types": "svelte-check"
   },
   "devDependencies": {
-    "@svebcomponents/build": "catalog:",
-    "@svebcomponents/ssr": "catalog:",
+    "@svebcomponents/build": "catalog:template",
+    "@svebcomponents/ssr": "catalog:template",
     "@svebcomponents/prettier-config": "workspace:*",
     "@svebcomponents/eslint-config": "workspace:*",
     "@svebcomponents/typescript-config": "workspace:*",
-    "rollup": "catalog:",
-    "svelte": "catalog:",
-    "svelte-check": "catalog:",
-    "vite": "catalog:"
+    "rollup": "catalog:template",
+    "svelte": "catalog:template",
+    "svelte-check": "catalog:template",
+    "vite": "catalog:template"
   }
 }
