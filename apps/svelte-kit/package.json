@@ -20,19 +20,19 @@
   },
   "dependencies": {
     "@svebcomponents/example-component": "workspace:*",
-    "@svebcomponents/ssr": "catalog:"
+    "@svebcomponents/ssr": "catalog:template"
   },
   "devDependencies": {
     "@svebcomponents/eslint-config": "workspace:*",
     "@svebcomponents/prettier-config": "workspace:*",
     "@svebcomponents/typescript-config": "workspace:*",
-    "@sveltejs/adapter-auto": "catalog:",
-    "@sveltejs/kit": "catalog:",
-    "@sveltejs/vite-plugin-svelte": "catalog:",
-    "globals": "catalog:",
-    "svelte": "catalog:",
-    "svelte-check": "catalog:",
-    "typescript": "catalog:",
-    "vite": "catalog:"
+    "@sveltejs/adapter-auto": "catalog:template",
+    "@sveltejs/kit": "catalog:template",
+    "@sveltejs/vite-plugin-svelte": "catalog:template",
+    "globals": "catalog:template",
+    "svelte": "catalog:template",
+    "svelte-check": "catalog:template",
+    "typescript": "catalog:template",
+    "vite": "catalog:template"
   }
 }

@@ -5,7 +5,7 @@ settings:
   excludeLinksFromLockfile: false
 
 catalogs:
-  default:
+  template:
     '@eslint/js':
       specifier: 9.24.0
       version: 9.24.0
@@ -85,13 +85,13 @@ importers:
         version: link:../../Library/pnpm/global/5/node_modules/@svebcomponents/ssr
     devDependencies:
       eslint:
-        specifier: 'catalog:'
+        specifier: catalog:template
         version: 9.24.0
       prettier:
-        specifier: 'catalog:'
+        specifier: catalog:template
         version: 3.5.3
       turbo:
-        specifier: 'catalog:'
+        specifier: catalog:template
         version: 2.5.2
 
   apps/svelte-kit:
@@ -100,7 +100,7 @@ importers:
         specifier: workspace:*
         version: link:../../components/example-component
       '@svebcomponents/ssr':
-        specifier: 'catalog:'
+        specifier: catalog:template
         version: 0.0.5(rollup@4.40.0)(svelte@5.28.2)
     devDependencies:
       '@svebcomponents/eslint-config':
@@ -113,34 +113,34 @@ importers:
         specifier: workspace:*
         version: link:../../configs/typescript-config
       '@sveltejs/adapter-auto':
-        specifier: 'catalog:'
+        specifier: catalog:template
         version: 6.0.0(@sveltejs/kit@2.20.5(@sveltejs/vite-plugin-svelte@5.0.3(svelte@5.28.2)(vite@6.2.6(@types/node@22.14.1)))(svelte@5.28.2)(vite@6.2.6(@types/node@22.14.1)))
       '@sveltejs/kit':
-        specifier: 'catalog:'
+        specifier: catalog:template
         version: 2.20.5(@sveltejs/vite-plugin-svelte@5.0.3(svelte@5.28.2)(vite@6.2.6(@types/node@22.14.1)))(svelte@5.28.2)(vite@6.2.6(@types/node@22.14.1))
       '@sveltejs/vite-plugin-svelte':
-        specifier: 'catalog:'
+        specifier: catalog:template
         version: 5.0.3(svelte@5.28.2)(vite@6.2.6(@types/node@22.14.1))
       globals:
-        specifier: 'catalog:'
+        specifier: catalog:template
         version: 16.0.0
       svelte:
-        specifier: 'catalog:'
+        specifier: catalog:template
         version: 5.28.2
       svelte-check:
-        specifier: 'catalog:'
+        specifier: catalog:template
         version: 4.1.6(picomatch@4.0.2)(svelte@5.28.2)(typescript@5.8.3)
       typescript:
-        specifier: 'catalog:'
+        specifier: catalog:template
         version: 5.8.3
       vite:
-        specifier: 'catalog:'
+        specifier: catalog:template
         version: 6.2.6(@types/node@22.14.1)
 
   components/example-component:
     devDependencies:
       '@svebcomponents/build':
-        specifier: 'catalog:'
+        specifier: catalog:template
         version: 0.0.4(@svebcomponents/ssr@0.0.5(rollup@4.40.0)(svelte@5.28.2))(rollup@4.40.0)(svelte@5.28.2)
       '@svebcomponents/eslint-config':
         specifier: workspace:*
@@ -149,22 +149,22 @@ importers:
         specifier: workspace:*
         version: link:../../configs/prettier-config
       '@svebcomponents/ssr':
-        specifier: 'catalog:'
+        specifier: catalog:template
         version: 0.0.5(rollup@4.40.0)(svelte@5.28.2)
       '@svebcomponents/typescript-config':
         specifier: workspace:*
         version: link:../../configs/typescript-config
       rollup:
-        specifier: 'catalog:'
+        specifier: catalog:template
         version: 4.40.0
       svelte:
-        specifier: 'catalog:'
+        specifier: catalog:template
         version: 5.28.2
       svelte-check:
-        specifier: 'catalog:'
+        specifier: catalog:template
         version: 4.1.6(picomatch@4.0.2)(svelte@5.28.2)(typescript@5.8.3)
       vite:
-        specifier: 'catalog:'
+        specifier: catalog:template
         version: 6.2.6(@types/node@22.14.1)
 
   configs/eslint-config:
@@ -173,34 +173,34 @@ importers:
         specifier: 1.2.8
         version: 1.2.8(eslint@9.24.0)
       '@eslint/js':
-        specifier: 'catalog:'
+        specifier: catalog:template
         version: 9.24.0
       '@svebcomponents/prettier-config':
         specifier: workspace:*
         version: link:../prettier-config
       eslint:
-        specifier: 'catalog:'
+        specifier: catalog:template
         version: 9.24.0
       eslint-config-prettier:
-        specifier: 'catalog:'
+        specifier: catalog:template
         version: 10.1.2(eslint@9.24.0)
       eslint-plugin-svelte:
-        specifier: 'catalog:'
+        specifier: catalog:template
         version: 3.5.1(eslint@9.24.0)(svelte@5.28.2)
       globals:
-        specifier: 'catalog:'
+        specifier: catalog:template
         version: 16.0.0
       typescript-eslint:
-        specifier: 'catalog:'
+        specifier: catalog:template
         version: 8.29.1(eslint@9.24.0)(typescript@5.8.3)
 
   configs/prettier-config:
     dependencies:
       prettier:
-        specifier: 'catalog:'
+        specifier: catalog:template
         version: 3.5.3
       prettier-plugin-svelte:
-        specifier: 'catalog:'
+        specifier: catalog:template
         version: 3.3.3(prettier@3.5.3)(svelte@5.28.2)
 
   configs/typescript-config:
@@ -209,10 +209,10 @@ importers:
         specifier: workspace:*
         version: link:../prettier-config
       '@tsconfig/strictest':
-        specifier: 'catalog:'
+        specifier: catalog:template
         version: 2.0.5
       '@tsconfig/svelte':
-        specifier: 'catalog:'
+        specifier: catalog:template
         version: 5.0.4
 
 packages:
