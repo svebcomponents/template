@@ -1,3 +1,6 @@
+> [!WARNING]
+> svebcomponents is currently in ALPHA
+
 # Svebcomponents - Template
 
 A template for getting started with building web components with `svelte` using [svebcomponents](https://github.com/Theo-Steiner/svebcomponents)
