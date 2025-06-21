@@ -14,7 +14,7 @@
     "./svelte": "./src/svelte.js"
   },
   "dependencies": {
-    "prettier": "catalog:template",
-    "prettier-plugin-svelte": "catalog:template"
+    "prettier": "catalog:",
+    "prettier-plugin-svelte": "catalog:"
   }
 }
