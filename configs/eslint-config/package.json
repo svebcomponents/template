@@ -17,12 +17,12 @@
   },
   "devDependencies": {
     "@eslint/compat": "1.2.8",
-    "@eslint/js": "catalog:template",
+    "@eslint/js": "catalog:",
     "@svebcomponents/prettier-config": "workspace:*",
-    "eslint": "catalog:template",
-    "eslint-config-prettier": "catalog:template",
-    "eslint-plugin-svelte": "catalog:template",
-    "globals": "catalog:template",
-    "typescript-eslint": "catalog:template"
+    "eslint": "catalog:",
+    "eslint-config-prettier": "catalog:",
+    "eslint-plugin-svelte": "catalog:",
+    "globals": "catalog:",
+    "typescript-eslint": "catalog:"
   }
 }
