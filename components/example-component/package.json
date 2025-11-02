@@ -12,7 +12,7 @@
     }
   },
   "scripts": {
-    "build": "rollup -c",
+    "build": "svebcomponents",
     "lint": "eslint .",
     "check-types": "svelte-check"
   },
