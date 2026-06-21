@@ -2,5 +2,8 @@
   "extends": [
     "@svebcomponents/typescript-config/base",
     "./.svelte-kit/tsconfig.json"
-  ]
+  ],
+  "compilerOptions": {
+    "checkJs": false
+  }
 }
