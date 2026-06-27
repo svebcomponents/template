@@ -28,8 +28,8 @@ catalogs:
       specifier: 2.0.5
       version: 2.0.5
     '@tsconfig/svelte':
-      specifier: 5.0.4
-      version: 5.0.4
+      specifier: 5.0.8
+      version: 5.0.8
     eslint:
       specifier: 9.24.0
       version: 9.24.0
@@ -197,7 +197,7 @@ importers:
         version: 2.0.5
       '@tsconfig/svelte':
         specifier: 'catalog:'
-        version: 5.0.4
+        version: 5.0.8
 
 packages:
 
@@ -874,8 +874,8 @@ packages:
   '@tsconfig/strictest@2.0.5':
     resolution: {integrity: sha512-ec4tjL2Rr0pkZ5hww65c+EEPYwxOi4Ryv+0MtjeaSQRJyq322Q27eOQiFbuNgw2hpL4hB1/W/HBGk3VKS43osg==}
 
-  '@tsconfig/svelte@5.0.4':
-    resolution: {integrity: sha512-BV9NplVgLmSi4mwKzD8BD/NQ8erOY/nUE/GpgWe2ckx+wIQF5RyRirn/QsSSCPeulVpc3RA/iJt6DpfTIZps0Q==}
+  '@tsconfig/svelte@5.0.8':
+    resolution: {integrity: sha512-UkNnw1/oFEfecR8ypyHIQuWYdkPvHiwcQ78sh+ymIiYoF+uc5H1UBetbjyqT+vgGJ3qQN6nhucJviX6HesWtKQ==}
 
   '@turbo/darwin-64@2.9.14':
     resolution: {integrity: sha512-t7QiPflaEyBE4oayeZtSmu4mEfjgIrcNlNNl1z1dmIVPqEdtA7+CfTf8d7KXsOGPh6aNgWjKxyvQg9uGfDQF+A==}
@@ -2567,7 +2567,7 @@ snapshots:
 
   '@tsconfig/strictest@2.0.5': {}
 
-  '@tsconfig/svelte@5.0.4': {}
+  '@tsconfig/svelte@5.0.8': {}
 
   '@turbo/darwin-64@2.9.14':
     optional: true
