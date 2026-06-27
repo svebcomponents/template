@@ -10,8 +10,8 @@ catalogs:
       specifier: 9.24.0
       version: 9.24.0
     '@svebcomponents/build':
-      specifier: 0.0.7
-      version: 0.0.7
+      specifier: 0.0.8
+      version: 0.0.8
     '@svebcomponents/ssr':
       specifier: 0.0.7
       version: 0.0.7
@@ -128,7 +128,7 @@ importers:
     devDependencies:
       '@svebcomponents/build':
         specifier: 'catalog:'
-        version: 0.0.7(@emnapi/core@1.11.1)(@emnapi/runtime@1.11.1)(@svebcomponents/ssr@0.0.7(@emnapi/core@1.11.1)(@emnapi/runtime@1.11.1)(@types/node@22.14.1)(jiti@2.7.0)(rollup@4.40.0)(svelte@5.34.7))(rollup@4.40.0)(svelte@5.34.7)
+        version: 0.0.8(@emnapi/core@1.11.1)(@emnapi/runtime@1.11.1)(@svebcomponents/ssr@0.0.7(@emnapi/core@1.11.1)(@emnapi/runtime@1.11.1)(@types/node@22.14.1)(jiti@2.7.0)(rollup@4.40.0)(svelte@5.34.7))(rollup@4.40.0)(svelte@5.34.7)
       '@svebcomponents/eslint-config':
         specifier: workspace:*
         version: link:../../configs/eslint-config
@@ -822,8 +822,8 @@ packages:
     peerDependencies:
       svelte: ^5.0.0
 
-  '@svebcomponents/build@0.0.7':
-    resolution: {integrity: sha512-ffOb0niL7QLaiEk0ZAjJRz4NVuaGDkaQktQQ85BOu/HvZtQKhZ9G5d2v99C5JkmwRk4dWf1+bkYTCNmhnzzLYQ==}
+  '@svebcomponents/build@0.0.8':
+    resolution: {integrity: sha512-9GSEr8Iu9yGtpuVApFb/fCKTV/NJwivEHGKln+fGZ4E4zkiAh2SpwKnIUdUyIlxYvtmHl0HjNq8X+cG+SY/4vQ==}
     hasBin: true
     peerDependencies:
       '@svebcomponents/ssr': ^0.0.7
@@ -2449,7 +2449,7 @@ snapshots:
       svelte: 5.34.7
       zimmerframe: 1.1.2
 
-  '@svebcomponents/build@0.0.7(@emnapi/core@1.11.1)(@emnapi/runtime@1.11.1)(@svebcomponents/ssr@0.0.7(@emnapi/core@1.11.1)(@emnapi/runtime@1.11.1)(@types/node@22.14.1)(jiti@2.7.0)(rollup@4.40.0)(svelte@5.34.7))(rollup@4.40.0)(svelte@5.34.7)':
+  '@svebcomponents/build@0.0.8(@emnapi/core@1.11.1)(@emnapi/runtime@1.11.1)(@svebcomponents/ssr@0.0.7(@emnapi/core@1.11.1)(@emnapi/runtime@1.11.1)(@types/node@22.14.1)(jiti@2.7.0)(rollup@4.40.0)(svelte@5.34.7))(rollup@4.40.0)(svelte@5.34.7)':
     dependencies:
       '@svebcomponents/auto-options': 0.0.4(svelte@5.34.7)
       '@svebcomponents/ssr': 0.0.7(@emnapi/core@1.11.1)(@emnapi/runtime@1.11.1)(@types/node@22.14.1)(jiti@2.7.0)(rollup@4.40.0)(svelte@5.34.7)
