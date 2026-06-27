@@ -3,7 +3,7 @@ packages:
   - components/*
   - configs/*
 catalog:
-  "@svebcomponents/build": 0.0.7
+  "@svebcomponents/build": 0.0.8
   "@svebcomponents/ssr": 0.0.7
   "@sveltejs/adapter-auto": 6.1.1
   "@sveltejs/kit": 2.60.1
