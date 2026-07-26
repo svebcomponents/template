@@ -1,5 +1,7 @@
-> [!WARNING]
-> svebcomponents is currently in ALPHA
+> [!NOTE]
+> Svebcomponents is currently in beta. Its build, auto-options, SSR, and
+> hydration workflows are ready for real-world evaluation and early production
+> adoption. APIs may still change before 1.0.
 
 # Svebcomponents - Template
 
