@@ -64,12 +64,44 @@ a peer dependency, those types are registered with Svelte's template types
 automatically, so the SvelteKit app type-checks `<example-component>` and its
 attributes.
 
+## Where component dependencies go
+
+Put a component package's dependencies in **`devDependencies`**. The browser
+build inlines those, which is what makes `dist/client/*.js` loadable straight
+from a CDN with no import map.
+
+`dependencies` and `peerDependencies` are left external and survive into the
+bundle as bare specifiers. `pnpm add` writes to `dependencies` by default, so
+it is easy to produce a non-self-contained bundle without noticing — use
+`pnpm add -D` in a component package.
+
+When something genuinely has to be both (a package whose types appear in your
+public declarations, say), declare it in `dependencies` and name it in a
+`svebcomponents.config.ts` under `deps.alwaysBundle`.
+
 ## Server rendering
 
 The app registers nothing by hand: importing the component package's `/ssr`
 entry from `hooks.server.ts` installs the DOM shim and self-registers the
 generated renderer, which reads its tag from `<svelte:options customElement>` at
 build time.
+
+## Scripts
+
+`pnpm build`, `pnpm dev`, `pnpm check`, `pnpm lint`, `pnpm fix` and `pnpm test`
+all run through turbo from the repo root.
+
+End-to-end tests live in `apps/svelte-kit/e2e` and run against the production
+build, asserting that the element is server-rendered as declarative shadow DOM
+and hydrated in place:
+
+```bash
+pnpm build
+pnpm --filter svelte-kit exec playwright install --with-deps chromium
+pnpm --filter svelte-kit test:e2e
+```
+
+They are not part of `pnpm test` or CI, since they need browsers downloaded.
 
 ## Documentation
 
