@@ -25,9 +25,6 @@
     "lint": "eslint .",
     "check": "svelte-check"
   },
-  "peerDependencies": {
-    "svelte": "^5.0.0"
-  },
   "devDependencies": {
     "@svebcomponents/build": "catalog:",
     "@svebcomponents/eslint-config": "workspace:*",
@@ -36,6 +33,7 @@
     "@svebcomponents/typescript-config": "workspace:*",
     "svelte": "catalog:",
     "svelte-check": "catalog:",
+    "tsdown": "catalog:",
     "vite": "catalog:"
   }
 }
