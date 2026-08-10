@@ -5,16 +5,28 @@
   "private": true,
   "exports": {
     ".": {
-      "import": "./dist/client/index.js"
+      "types": "./dist/client/ExampleComponent.d.ts",
+      "svelte": "./dist/client-svelte/ExampleComponent.js",
+      "default": "./dist/client/ExampleComponent.js"
     },
     "./ssr": {
-      "import": "./dist/server/ssr.js"
+      "types": "./dist/server/ssr.d.ts",
+      "svelte": "./dist/server-svelte/ssr.js",
+      "default": "./dist/server/ssr.js"
     }
   },
+  "customElements": "custom-elements.json",
+  "files": [
+    "dist",
+    "custom-elements.json"
+  ],
   "scripts": {
     "build": "svebcomponents",
     "lint": "eslint .",
-    "check-types": "svelte-check"
+    "check": "svelte-check"
+  },
+  "peerDependencies": {
+    "svelte": "^5.0.0"
   },
   "devDependencies": {
     "@svebcomponents/build": "catalog:",
