@@ -5,7 +5,7 @@ packages:
 catalog:
   "@eslint/compat": 2.1.0
   "@playwright/test": 1.62.1
-  "@svebcomponents/build": 0.5.0
+  "@svebcomponents/build": 0.6.0
   "@svebcomponents/ssr": 0.6.0
   "@sveltejs/adapter-auto": 7.0.1
   "@sveltejs/kit": 2.70.2
@@ -38,6 +38,6 @@ minimumReleaseAgeExclude:
   - turbo@2.10.7
   # freshly published; drop these once they age past the policy cutoff
   - '@svebcomponents/auto-options@0.3.0'
-  - '@svebcomponents/build@0.5.0'
+  - '@svebcomponents/build@0.6.0'
   - '@svebcomponents/ssr@0.6.0'
   - '@svebcomponents/utils@0.3.0'
