@@ -44,7 +44,6 @@ renderer:
   "exports": {
     ".": {
       "types": "./dist/client/ExampleComponent.d.ts",
-      "svelte": "./dist/client-svelte/ExampleComponent.js",
       "default": "./dist/client/ExampleComponent.js"
     },
     "./svelte": {
@@ -52,7 +51,6 @@ renderer:
     },
     "./ssr": {
       "types": "./dist/server/ssr.d.ts",
-      "svelte": "./dist/server-svelte/ssr.js",
       "default": "./dist/server/ssr.js"
     }
   },
