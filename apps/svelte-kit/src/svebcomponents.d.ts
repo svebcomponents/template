@@ -2,22 +2,10 @@
 // template types, so `<example-component>` is checked like any other element:
 // unknown attributes and `increments="nope"` become errors.
 //
-// svebcomponents can do this for you, but only for packages that declare
-// `svelte` as a required dependency of their consumers. This one deliberately
-// does not — that would make the build treat Svelte as external and stop
-// `dist/client` from being a standalone bundle. So the augmentation lives here
-// instead, in the application that actually has Svelte.
+// The package generates this augmentation and exposes it as `./svelte`. It is
+// not loaded automatically because the package does not declare `svelte` — that
+// would oblige every consumer to install it, including ones using the element
+// from a plain HTML page. This app has Svelte, so it opts in.
 //
-// See https://svebcomponents.dev/guides/framework-types/
-import type { HTMLAttributes } from "svelte/elements";
-import type {
-  ExampleComponentElement,
-  ExampleComponentAttributes,
-} from "@svebcomponents/example-component";
-
-declare module "svelte/elements" {
-  interface SvelteHTMLElements {
-    "example-component": HTMLAttributes<ExampleComponentElement> &
-      ExampleComponentAttributes;
-  }
-}
+// A `.d.ts` on purpose: the import is types-only and never reaches runtime.
+import "@svebcomponents/example-component/svelte";

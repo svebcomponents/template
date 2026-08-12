@@ -47,6 +47,9 @@ renderer:
       "svelte": "./dist/client-svelte/ExampleComponent.js",
       "default": "./dist/client/ExampleComponent.js"
     },
+    "./svelte": {
+      "types": "./dist/client/ExampleComponent.svelte-types.d.ts"
+    },
     "./ssr": {
       "types": "./dist/server/ssr.d.ts",
       "svelte": "./dist/server-svelte/ssr.js",
@@ -61,39 +64,37 @@ Every build also emits a
 [custom elements manifest](https://svebcomponents.dev/publishing/#ship-the-manifest)
 and TypeScript types for the element.
 
-`apps/svelte-kit/src/svebcomponents.d.ts` registers those types with Svelte's
-template types, so the app checks `<example-component>` like any other element
-— unknown attributes and `increments="nope"` are errors.
+The build also writes the Svelte template types, which the component package
+exposes as `./svelte`. `apps/svelte-kit/src/svebcomponents.d.ts` opts in with a
+single line, and the app then checks `<example-component>` like any other
+element — unknown attributes and `increments="nope"` are errors.
 
-svebcomponents can generate that augmentation for you, but only for packages
-that declare `svelte` as a required dependency of their consumers. This one
-deliberately does not: a `dependency` or `peerDependency` is left external by
-the build, which would stop `dist/client` from being a standalone bundle. The
-eight-line augmentation lives in the app instead — see
+They are not loaded automatically because the package does not declare `svelte`.
+Declaring it would oblige every consumer to install Svelte, including one using
+the element from a plain HTML page, and a component package should not force
+that on people just to ship types. See
 [typing elements in React & Vue](https://svebcomponents.dev/guides/framework-types/)
 for the same recipe in other frameworks.
 
-## Where component dependencies go
+## Dependencies
 
-Put a component package's dependencies in **`devDependencies`**. The browser
-build inlines those, which is what makes `dist/client/*.js` loadable straight
-from a CDN with no import map.
+Declare them for what they mean: `dependencies` is what your consumers must
+install, `devDependencies` is what only you need. Bundling does not enter into
+it — `dist/client` is loaded without a module resolver, so the browser build
+inlines every bare specifier either way and stays loadable straight from a CDN.
 
-`dependencies` and `peerDependencies` are left external and survive into the
-bundle as bare specifiers. `pnpm add` writes to `dependencies` by default, so
-it is easy to produce a non-self-contained bundle without noticing — use
-`pnpm add -D` in a component package. This applies to `svelte` itself: moving
-it out of `devDependencies` shrinks `dist/client` from ~38 kB to ~4 kB and
-leaves a bare `svelte` import no browser can resolve.
+That matters mostly for the case where you have no choice. If your published
+element types name a type from another package, that package has to be a real
+`dependency` or your consumers cannot resolve it; the bundle keeps working.
 
-When something genuinely has to be both (a package whose types appear in your
-public declarations, say), declare it in `dependencies` and name it in a
-`svebcomponents.config.ts` under `deps.alwaysBundle`.
+For the rare dependency the host should provide rather than you bundling it, opt
+out:
 
-`tsdown` is a peer dependency of `@svebcomponents/build`, declared with an open
-range. Pin it in your own `devDependencies` (this template catalogs it): with
-`auto-install-peers`, pnpm otherwise installs the bottom of that range, and an
-old tsdown silently ignores the bundling rules the build relies on.
+```json
+{
+  "svebcomponents": { "neverBundle": ["@acme/design-system"] }
+}
+```
 
 ## Server rendering
 
