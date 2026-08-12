@@ -36,8 +36,7 @@ minimumReleaseAgeExclude:
   - '@turbo/windows-64@2.10.7'
   - '@turbo/windows-arm64@2.10.7'
   - turbo@2.10.7
-  # freshly published; drop these once they age past the policy cutoff
-  - '@svebcomponents/auto-options@0.3.0'
-  - '@svebcomponents/build@0.6.0'
-  - '@svebcomponents/ssr@0.6.0'
-  - '@svebcomponents/utils@0.3.0'
+  # our own scope: these are released from svebcomponents/svebcomponents by
+  # the same people who maintain this repo, so the release-age delay buys
+  # nothing and only blocks us from consuming a release we just cut.
+  - '@svebcomponents/*'
