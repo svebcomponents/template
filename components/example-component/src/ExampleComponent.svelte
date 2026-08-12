@@ -1,9 +1,12 @@
+<svelte:options customElement="example-component" />
+
 <script lang="ts">
-  let {
-    increments = 1,
-  }: {
+  interface Props {
+    /** How much to add to the count on every click. */
     increments: number;
-  } = $props();
+  }
+
+  let { increments = 1 }: Props = $props();
   let count = $state(0);
 </script>
 

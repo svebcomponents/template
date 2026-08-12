@@ -23,6 +23,7 @@
     "@svebcomponents/ssr": "catalog:"
   },
   "devDependencies": {
+    "@playwright/test": "catalog:",
     "@svebcomponents/eslint-config": "workspace:*",
     "@svebcomponents/prettier-config": "workspace:*",
     "@svebcomponents/typescript-config": "workspace:*",
