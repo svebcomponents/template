@@ -12,8 +12,8 @@ catalog:
   "@sveltejs/vite-plugin-svelte": 7.2.0
   "@tsconfig/strictest": 2.0.8
   "@tsconfig/svelte": 5.0.8
-  eslint: 9.39.5
-  "@eslint/js": 9.39.5
+  eslint: 10.8.1
+  "@eslint/js": 10.0.1
   eslint-config-prettier: 10.1.8
   eslint-plugin-svelte: 3.22.0
   globals: 17.11.0
