@@ -27,14 +27,17 @@ jobs:
       - name: install deps
         run: pnpm install
 
+      - name: install browser
+        run: pnpm --filter svelte-kit exec playwright install --with-deps chromium
+
       - name: type check
         run: pnpm check
 
       - name: lint
         run: pnpm lint
 
-      - name: test
-        run: pnpm test
-
       - name: build
         run: pnpm build
+
+      - name: test
+        run: pnpm test
