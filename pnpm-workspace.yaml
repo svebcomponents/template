@@ -20,7 +20,7 @@ catalog:
   prettier: 3.9.6
   prettier-plugin-svelte: 4.1.1
   svelte: 5.56.9
-  svelte-check: 4.7.5
+  svelte-check: 4.7.6
   turbo: 2.10.9
   typescript: 5.9.3
   typescript-eslint: 8.65.0
