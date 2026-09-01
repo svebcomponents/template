@@ -16,7 +16,7 @@
     "prettier": "catalog:",
     "turbo": "catalog:"
   },
-  "packageManager": "pnpm@11.17.0",
+  "packageManager": "pnpm@11.25.0",
   "engines": {
     "node": "^22.19.0 || >=24.11.0"
   }
