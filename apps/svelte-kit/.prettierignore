@@ -7,3 +7,13 @@ bun.lockb
 
 # SvelteKit adapter output
 build
+
+# prettier only reads the .gitignore in its working directory, and the
+# ignore rules for generated files live in the root .gitignore
+.svelte-kit
+test-results
+.output
+.vercel
+.netlify
+.wrangler
+vite.config.*.timestamp-*

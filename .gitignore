@@ -9,13 +9,13 @@ node_modules
 
 # Local env files
 .env
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
+.env.*
+!.env.example
+!.env.test
 
 # Testing
 coverage
+test-results
 
 # Turbo
 .turbo
@@ -25,6 +25,15 @@ dist
 custom-elements.json
 # SvelteKit adapter-node / adapter-static output
 build
+# deployment adapter output
+.output
+.vercel
+.netlify
+.wrangler
+
+# Vite
+vite.config.js.timestamp-*
+vite.config.ts.timestamp-*
 
 
 # Debug
@@ -32,6 +41,7 @@ npm-debug.log*
 
 # Misc
 .DS_Store
+Thumbs.db
 *.pem
 
 *storybook.log
