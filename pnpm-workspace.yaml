@@ -8,7 +8,7 @@ catalog:
   "@svebcomponents/build": 0.7.1
   "@svebcomponents/ssr": 0.8.0
   "@sveltejs/adapter-auto": 7.0.1
-  "@sveltejs/kit": 2.70.2
+  "@sveltejs/kit": 2.70.3
   "@sveltejs/vite-plugin-svelte": 7.3.0
   "@tsconfig/strictest": 2.0.8
   "@tsconfig/svelte": 5.0.8
