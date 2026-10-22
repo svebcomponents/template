@@ -3,7 +3,7 @@ packages:
   - components/*
   - configs/*
 catalog:
-  "@eslint/compat": 2.1.0
+  "@eslint/compat": 2.1.1
   "@playwright/test": 1.62.1
   "@svebcomponents/build": 0.7.1
   "@svebcomponents/ssr": 0.8.0
